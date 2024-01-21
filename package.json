@@ -1,0 +1,67 @@
+{
+  "name": "squirrel-ellipsis",
+  "version": "1.0.0",
+  "description": "multiline text ellipsis",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "start": "tsup --watch",
+    "build": "tsup",
+    "bootstrap": "yarn install && cd site && yarn install"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Holybasil/squirrel-ellipsis.git"
+  },
+  "keywords": [
+    "text",
+    "multiline",
+    "ellipsis",
+    "extended"
+  ],
+  "author": "Yvaine",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Holybasil/squirrel-ellipsis/issues"
+  },
+  "homepage": "https://github.com/Holybasil/squirrel-ellipsis#readme",
+  "lint-staged": {
+    "*.{md,json}": "prettier --write",
+    "*.js": [
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "prettier src --ignore-unknown --write"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "singleQuote": false
+  },
+  "devDependencies": {
+    "prettier": "^2.7.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tsup": "^8.0.1",
+    "typescript": "^5.1.6",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  }
+}
