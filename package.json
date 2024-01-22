@@ -1,7 +1,7 @@
 {
   "name": "squirrel-ellipsis",
   "version": "1.0.0",
-  "description": "multiline text ellipsis",
+  "description": "an Expandable Multiline Text Component designed for React",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {
